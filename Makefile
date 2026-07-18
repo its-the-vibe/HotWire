@@ -3,7 +3,7 @@
 all: fmt lint test-race build
 
 build:
-	go build ./...
+	go build -o hotwire ./cmd/hotwire
 
 fmt:
 	test -z "$$(gofmt -l .)"

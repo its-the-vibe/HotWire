@@ -43,7 +43,7 @@ Available targets:
 
 | Target | Description |
 |--------|-------------|
-| `make build` | Build all packages |
+| `make build` | Build the CLI as `./hotwire` |
 | `make fmt` | Verify Go formatting |
 | `make lint` | Run `go vet` |
 | `make test` | Run the test suite |
