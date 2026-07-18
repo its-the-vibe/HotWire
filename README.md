@@ -1,5 +1,7 @@
 # HotWire
 
+[![CI](https://github.com/its-the-vibe/HotWire/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/its-the-vibe/HotWire/actions/workflows/ci.yaml)
+
 A lightweight, high-performance, real-time configuration hot-reloading ecosystem in Go.  
 HotWire uses a lock-free **Signal + Fetch** model via Redis to push configuration changes to every connected client instantly — no application restarts required.
 
@@ -26,6 +28,26 @@ hotwire/
 ├── go.mod
 └── README.md
 ```
+
+---
+
+## Development
+
+Run the complete local verification suite:
+
+```bash
+make
+```
+
+Available targets:
+
+| Target | Description |
+|--------|-------------|
+| `make build` | Build all packages |
+| `make fmt` | Verify Go formatting |
+| `make lint` | Run `go vet` |
+| `make test` | Run the test suite |
+| `make test-race` | Run tests with the race detector |
 
 ---
 
@@ -102,11 +124,11 @@ func main() {
 ## Running Tests
 
 ```bash
-# Standard
-go test ./...
+# Standard test suite
+make test
 
-# With race detector (required for acceptance)
-go test -race ./...
+# Race-enabled test suite
+make test-race
 ```
 
 The test suite covers:
