@@ -1,6 +1,6 @@
 module github.com/its-the-vibe/HotWire
 
-go 1.24.13
+go 1.27.1
 
 require (
 	github.com/alicebob/miniredis/v2 v2.38.0
